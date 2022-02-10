@@ -1,57 +1,50 @@
-
 /////////////////////////////
 
 //LOGO
-.logo{
-    height: 3.25rem;
+.logo {
+  height: 3.25rem;
 }
 
 //////////////////////////////
 
 //SEARCH
-.search{
-    &__input{
+.search {
+  &__input {
+  }
 
-    }
+  &__button {
+  }
 
-    &__button{
-
-    }
-
-    &__icon{
-        height: 2rem;
-        width: 2rem;
-    }
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+  }
 }
-
-
 
 //USER-NAV
 
-.user-nav{
-    &__icon-box{
+.user-nav {
+  &__icon-box {
+  }
 
-    }
+  &__icon {
+    height: 2.25rem;
+    width: 2.25rem;
+  }
 
-    &__icon{
-        height: 2.25rem;
-        width: 2.25rem;
-    }
+  &__notification {
+  }
 
-    &__notification{
+  &__user {
+    height: 3.75rem;
+    border-radius: 50%;
+  }
 
-    }
+  &__user-photo {
+    height: 3.75rem;
+    border-radius: 50%;
+  }
 
-    &__user{
-        height: 3.75rem;
-        border-radius: 50%;
-    }
-
-    &__user-photo{
-
-    }
-
-    &__user-name{
-
-    }
+  &__user-name {
+  }
 }
