@@ -1,20 +1,25 @@
-/////////////////////////////
-
-//LOGO
+////////////////////////////////////////
+// LOGO
 .logo {
   height: 3.25rem;
-  margin-left: 3rem;
+  width: auto;
+  margin-left: 2rem;
 }
 
-//////////////////////////////
-
-//SEARCH
+////////////////////////////////////////
+// SEARCH
 .search {
-  background-color: orangered;
   flex: 0 0 40%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--grey-light-2);
+  }
 
   &__input {
     font-family: inherit;
@@ -22,93 +27,88 @@
     color: inherit;
     background-color: var(--grey-light-2);
     border: none;
-    padding: .7rem 2rem;
+    padding: 0.7rem 2rem;
     border-radius: 100px;
     width: 90%;
-    transition: all .2s;
+    transition: all 0.2s;
     margin-right: -3.25rem;
-    
-    &::placeholder{
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--grey-light-3);
+    }
+
+    &::-webkit-input-placeholder {
       font-weight: 100;
       color: var(--grey-light-4);
     }
-
-    &:focus{
-      outline: none;
-      width: 100%;
-      background-color: var(--grey-dark-2);
-    }
   }
 
-  &__input:focus + &__button{
-    background-color: var(--grey-dark-2);
+  &__input:focus + &__button {
+    background-color: var(--grey-light-3);
   }
 
   &__button {
     border: none;
     background-color: var(--grey-light-2);
-    &:focus{
+
+    &:focus {
       outline: none;
     }
 
-    &:active{
-      transform: translate(2px);
+    &:active {
+      transform: translateY(2px);
     }
   }
 
   &__icon {
     height: 2rem;
     width: 2rem;
-    fill: var(--grey-dark-2);
+    fill: var(--grey-dark-3);
   }
 }
 
-
-//USER-NAVIGATION
-
+////////////////////////////////////////
+// USER NAVIGATION
 .user-nav {
-  align-self: center;
+  align-self: stretch;
+
   display: flex;
   align-items: center;
-  justify-content: center;
-  
 
   & > * {
     padding: 0 2rem;
     cursor: pointer;
     height: 100%;
-    display:flex;
+    display: flex;
     align-items: center;
   }
 
   & > *:hover {
-    background-color: var(--grey-dark-2);
+    background-color: var(--grey-light-2);
   }
 
-
   &__icon-box {
-    display:flex;
-    align-items: center;
     position: relative;
   }
 
   &__icon {
     height: 2.25rem;
     width: 2.25rem;
-    fill:var(--grey-dark-2);
-    
+    fill: var(--grey-dark-2);
   }
 
   &__notification {
-    font-size: .8rem;
+    font-size: 0.8rem;
     height: 1.75rem;
-    width: .75rem;
+    width: 1.75rem;
     border-radius: 50%;
     background-color: var(--color-primary);
     color: #fff;
     position: absolute;
     top: 1.5rem;
-    right: 1.5rem;
+    right: 1.1rem;
 
     display: flex;
     justify-content: center;
@@ -120,5 +120,4 @@
     border-radius: 50%;
     margin-right: 1rem;
   }
-
 }
