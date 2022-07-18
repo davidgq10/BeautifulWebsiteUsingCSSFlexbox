@@ -134,7 +134,12 @@ body {
 }
 @media only screen and (max-width: 56.25em) {
   .detail {
-    padding: 2rem;
+    padding: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .detail {
+    flex-direction: column;
   }
 }
 
@@ -149,6 +154,12 @@ body {
   .description {
     padding: 2rem;
     margin-right: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .description {
+    margin-right: 0;
+    margin-bottom: 3rem;
   }
 }
 
@@ -266,20 +277,33 @@ body {
   list-style: none;
   margin-top: 3.5rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .side-nav {
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .side-nav {
+    justify-content: center;
+    padding: 0;
+  }
+}
 .side-nav__item {
   position: relative;
+}
+@media only screen and (max-width: 56.25em) {
+  .side-nav__item {
+    flex: 1;
+    margin: 0;
+  }
 }
 .side-nav__item:not(:last-child) {
   margin-bottom: 0.3rem;
 }
 @media only screen and (max-width: 56.25em) {
   .side-nav__item:not(:last-child) {
-    margin: 0;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .side-nav__item {
-    flex: 1;
     margin: 0;
   }
 }
@@ -312,10 +336,11 @@ body {
   position: relative;
   z-index: 10;
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 37.5em) {
   .side-nav__link:link, .side-nav__link:visited {
-    justify-content: center;
-    padding: 2rem;
+    flex-direction: column;
+    margin: 0;
+    padding: 1rem;
   }
 }
 .side-nav__icon {
@@ -323,6 +348,13 @@ body {
   height: 1.75em;
   margin-right: 2rem;
   fill: currentColor;
+}
+@media only screen and (max-width: 37.5em) {
+  .side-nav__icon {
+    margin: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 @media only screen and (max-width: 56.25em) {
   .side-nav {
@@ -363,6 +395,12 @@ body {
   letter-spacing: 1px;
   padding: 1.25rem 3rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .overview__heading {
+    font-size: 1.8rem;
+    padding: 1.25rem 2rem;
+  }
+}
 .overview__stars {
   margin-right: auto;
   display: flex;
@@ -391,14 +429,29 @@ body {
   padding: 0 2.25rem;
   align-self: stretch;
 }
+@media only screen and (max-width: 37.5em) {
+  .overview__rating {
+    padding: 0 1.5rem;
+  }
+}
 .overview__rating--average {
   font-size: 2.25rem;
   font-weight: 300;
+}
+@media only screen and (max-width: 37.5em) {
+  .overview__rating--average {
+    font-size: 1.8rem;
+  }
 }
 .overview__rating--count {
   font-size: 0.8rem;
   text-transform: uppercase;
   margin-top: -3px;
+}
+@media only screen and (max-width: 37.5em) {
+  .overview__rating--count {
+    font-size: 0.5rem;
+  }
 }
 
 .btn-inline {

@@ -130,8 +130,26 @@
   list-style: none;
   margin-top: 3.5rem;
 
+  @media only screen and (max-width:$bp-medium) {
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  @media only screen and (max-width:$bp-small) {
+    justify-content: center;
+    padding: 0;
+  }
+
   &__item {
     position: relative;
+
+    @media only screen and (max-width:$bp-medium) {
+      flex: 1;
+      margin: 0;
+    }
+
+
 
     &:not(:last-child) {
       margin-bottom: 0.3rem;
@@ -141,10 +159,7 @@
       }
     }
 
-    @media only screen and (max-width:$bp-medium) {
-      flex: 1;
-      margin: 0;
-    }
+
   }
 
   &__item::before {
@@ -172,6 +187,13 @@
 
   &__link:link,
   &__link:visited {
+
+    @media only screen and (max-width:$bp-small) {
+      flex-direction: column;
+      margin: 0;
+      padding: 1rem;
+    }
+
     color: var(--color-grey-light-1);
     text-decoration: none;
     text-transform: uppercase;
@@ -182,10 +204,7 @@
     position: relative;
     z-index: 10;
 
-    @media only screen and (max-width:$bp-medium) {
-      justify-content: center;
-      padding: 2rem;
-    }
+
   }
 
   &__icon {
@@ -193,6 +212,13 @@
     height: 1.75em;
     margin-right: 2rem;
     fill: currentColor;
+
+    @media only screen and (max-width:$bp-small) {
+      margin: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
   }
 
   @media only screen and (max-width:$bp-medium) {
@@ -240,6 +266,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.25rem 3rem;
+
+    @media only screen and (max-width:$bp-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
   }
 
   &__stars {
@@ -275,17 +306,29 @@
     color: #fff;
     padding: 0 2.25rem;
     align-self: stretch;
+
+    @media only screen and (max-width:$bp-small) {
+      padding: 0 1.5rem;
+    }
   }
 
   &__rating--average {
     font-size: 2.25rem;
     font-weight: 300;
+
+    @media only screen and (max-width:$bp-small) {
+      font-size: 1.8rem;
+    }
   }
 
   &__rating--count {
     font-size: 0.8rem;
     text-transform: uppercase;
     margin-top: -3px;
+
+    @media only screen and (max-width:$bp-small) {
+      font-size: .5rem;
+    }
   }
 }
 
